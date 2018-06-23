@@ -169,6 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context) => new GirliesAboutUs()));
               },
+              //
             ),
             new ListTile(
               trailing: new CircleAvatar(
