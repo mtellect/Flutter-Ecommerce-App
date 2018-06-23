@@ -4,7 +4,7 @@ Part One of Building FlutterGirlies Shopping/ E-commerce App from scratch
 
 ## What we did
 
-Basically in this part we would build the various user screens for the user section of the application, without full functionalities.
+Basically in this part we built the various user screens for the user section of the application, without full functionalities.
 
 
 ### Show some :heart: and star the repo to support the project
