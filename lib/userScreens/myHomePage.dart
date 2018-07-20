@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_girlies_store/tools/Store.dart';
+import 'package:flutter_girlies_store/userScreens/item_details.dart';
+import 'package:flutter_girlies_store/userScreens/itemdetails.dart';
 import 'favorites.dart';
 import 'messages.dart';
 import 'cart.dart';
@@ -70,84 +72,104 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisCount: 2),
               itemCount: storeItems.length,
               itemBuilder: (BuildContext context, int index) {
-                return new Card(
-                  child: Stack(
-                    alignment: FractionalOffset.topLeft,
-                    children: <Widget>[
-                      new Stack(
-                        alignment: FractionalOffset.bottomCenter,
-                        children: <Widget>[
-                          new Container(
-                            decoration: new BoxDecoration(
-                                image: new DecorationImage(
-                                    fit: BoxFit.fitWidth,
-                                    image: new NetworkImage(
-                                        storeItems[index].itemImage))),
-                          ),
-                          new Container(
-                            height: 35.0,
-                            color: Colors.black.withAlpha(100),
-                            child: new Padding(
-                              padding: const EdgeInsets.all(8.0),
+                return new GestureDetector(
+                  onTap: () {
+                    /* Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (context) => new ItemDetails(
+                              itemImage: storeItems[index].itemImage,
+                              itemName: storeItems[index].itemName,
+                              itemPrice: storeItems[index].itemPrice,
+                              itemRating: storeItems[index].itemRating,
+                            )));*/
+
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (context) => new ItemDetail(
+                              itemImage: storeItems[index].itemImage,
+                              itemName: storeItems[index].itemName,
+                              itemPrice: storeItems[index].itemPrice,
+                              itemRating: storeItems[index].itemRating,
+                            )));
+                  },
+                  child: new Card(
+                    child: Stack(
+                      alignment: FractionalOffset.topLeft,
+                      children: <Widget>[
+                        new Stack(
+                          alignment: FractionalOffset.bottomCenter,
+                          children: <Widget>[
+                            new Container(
+                              decoration: new BoxDecoration(
+                                  image: new DecorationImage(
+                                      fit: BoxFit.fitWidth,
+                                      image: new NetworkImage(
+                                          storeItems[index].itemImage))),
+                            ),
+                            new Container(
+                              height: 35.0,
+                              color: Colors.black.withAlpha(100),
+                              child: new Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: new Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    new Text(
+                                      "${storeItems[index].itemName.substring(0, 8)}...",
+                                      style: new TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 16.0,
+                                          color: Colors.white),
+                                    ),
+                                    new Text(
+                                      "N${storeItems[index].itemPrice}",
+                                      style: new TextStyle(
+                                          color: Colors.red[500],
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new Container(
+                              height: 30.0,
+                              width: 60.0,
+                              decoration: new BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: new BorderRadius.only(
+                                    topRight: new Radius.circular(5.0),
+                                    bottomRight: new Radius.circular(5.0),
+                                  )),
                               child: new Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
-                                  new Text(
-                                    "${storeItems[index].itemName.substring(0, 8)}...",
-                                    style: new TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 16.0,
-                                        color: Colors.white),
+                                  new Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 20.0,
                                   ),
                                   new Text(
-                                    "N${storeItems[index].itemPrice}",
-                                    style: new TextStyle(
-                                        color: Colors.red[500],
-                                        fontWeight: FontWeight.w700),
-                                  ),
+                                    "${storeItems[index].itemRating}",
+                                    style: new TextStyle(color: Colors.white),
+                                  )
                                 ],
                               ),
                             ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          new Container(
-                            height: 30.0,
-                            width: 60.0,
-                            decoration: new BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: new BorderRadius.only(
-                                  topRight: new Radius.circular(5.0),
-                                  bottomRight: new Radius.circular(5.0),
-                                )),
-                            child: new Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                new Icon(
-                                  Icons.star,
+                            new IconButton(
+                                icon: Icon(
+                                  Icons.favorite_border,
                                   color: Colors.blue,
-                                  size: 20.0,
                                 ),
-                                new Text(
-                                  "${storeItems[index].itemRating}",
-                                  style: new TextStyle(color: Colors.white),
-                                )
-                              ],
-                            ),
-                          ),
-                          new IconButton(
-                              icon: Icon(
-                                Icons.favorite_border,
-                                color: Colors.blue,
-                              ),
-                              onPressed: () {})
-                        ],
-                      )
-                    ],
+                                onPressed: () {})
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 );
               },
