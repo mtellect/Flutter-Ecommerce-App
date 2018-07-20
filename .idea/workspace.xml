@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7de32003-b31a-4128-8964-9ebf67bd3fea" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/userScreens/item_details.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/userScreens/itemdetails.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/userScreens/myHomePage.dart" afterPath="$PROJECT_DIR$/lib/userScreens/myHomePage.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -332,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530984897687</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tutorial 4 (item details page added)">
+      <created>1532065468897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532065468897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -410,7 +412,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added read me" />
-    <option name="LAST_COMMIT_MESSAGE" value="added read me" />
+    <MESSAGE value="tutorial 4 (item details page added)" />
+    <option name="LAST_COMMIT_MESSAGE" value="tutorial 4 (item details page added)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
