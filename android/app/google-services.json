@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "765039998021",
+    "firebase_url": "https://girlies-b6d37.firebaseio.com",
+    "project_id": "girlies-b6d37",
+    "storage_bucket": "girlies-b6d37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765039998021:android:ebf384dda9b7eae2",
+        "android_client_info": {
+          "package_name": "com.oinder.fluttergirliesstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765039998021-v2abj5hfl7su3p7tj81m5toojjrvu2gj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oinder.fluttergirliesstore",
+            "certificate_hash": "7b5a561542c04b06f4f4c946015060da58518166"
+          }
+        },
+        {
+          "client_id": "765039998021-nc6kuhdlvd03pfffpihb1kecgqlulfd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVjFm3c1NsSRWsU2oLuo9oyGKtWAo0SSU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765039998021-nc6kuhdlvd03pfffpihb1kecgqlulfd6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
