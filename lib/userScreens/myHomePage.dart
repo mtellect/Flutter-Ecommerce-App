@@ -1,8 +1,16 @@
+import 'dart:async';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_girlies_store/tools/Store.dart';
+import 'package:flutter_girlies_store/tools/app_data.dart';
+import 'package:flutter_girlies_store/tools/app_methods.dart';
+import 'package:flutter_girlies_store/tools/app_tools.dart';
+import 'package:flutter_girlies_store/tools/firebase_methods.dart';
 import 'package:flutter_girlies_store/userScreens/item_details.dart';
 import 'package:flutter_girlies_store/userScreens/itemdetails.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'favorites.dart';
 import 'messages.dart';
 import 'cart.dart';
@@ -11,7 +19,7 @@ import 'history.dart';
 import 'profile.dart';
 import 'delivery.dart';
 import 'aboutUs.dart';
-import 'loginLogout.dart';
+import 'login.dart';
 import 'dart:io';
 
 class MyHomePage extends StatefulWidget {
@@ -21,6 +29,29 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   BuildContext context;
+  String acctName = "";
+  String acctEmail = "";
+  String acctPhotoURL = "";
+  bool isLoggedIn;
+  AppMethods appMethods = new FirebaseMethods();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getCurrentUser();
+    super.initState();
+  }
+
+  Future getCurrentUser() async {
+    acctName = await getStringDataLocally(key: acctFullName);
+    acctEmail = await getStringDataLocally(key: userEmail);
+    acctPhotoURL = await getStringDataLocally(key: photoURL);
+    isLoggedIn = await getBoolDataLocally(key: loggedIN);
+    //print(await getStringDataLocally(key: userEmail));
+    acctName == null ? acctName = "Guest User" : acctName;
+    acctEmail == null ? acctEmail = "guestUser@email.com" : acctEmail;
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -203,8 +234,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              accountName: new Text("Maugost Mtellect"),
-              accountEmail: new Text("ammaugost@gmail.com"),
+              accountName: new Text(acctName),
+              accountEmail: new Text(acctEmail),
               currentAccountPicture: new CircleAvatar(
                 backgroundColor: Colors.white,
                 child: new Icon(Icons.person),
@@ -292,15 +323,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   size: 20.0,
                 ),
               ),
-              title: new Text("Login"),
-              onTap: () {
-                Navigator.of(context).push(new CupertinoPageRoute(
-                    builder: (BuildContext context) => new GirliesLogin()));
-              },
+              title: new Text(isLoggedIn == true ? "Logout" : "Login"),
+              onTap: checkIfLoggedIn,
             ),
           ],
         ),
       ),
     );
+  }
+
+  checkIfLoggedIn() async {
+    if (isLoggedIn == false) {
+      bool response = await Navigator.of(context).push(new CupertinoPageRoute(
+          builder: (BuildContext context) => new GirliesLogin()));
+      if (response == true) getCurrentUser();
+      return;
+    }
+    bool response = await appMethods.logOutUser();
+    if (response == true) getCurrentUser();
   }
 }

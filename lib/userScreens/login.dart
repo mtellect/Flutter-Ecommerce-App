@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_girlies_store/tools/app_data.dart';
+import 'package:flutter_girlies_store/tools/app_methods.dart';
 import 'package:flutter_girlies_store/tools/app_tools.dart';
+import 'package:flutter_girlies_store/tools/firebase_methods.dart';
 import 'package:flutter_girlies_store/userScreens/signup.dart';
 
 class GirliesLogin extends StatefulWidget {
@@ -12,6 +15,7 @@ class _GirliesLoginState extends State<GirliesLogin> {
   TextEditingController password = new TextEditingController();
   final scaffoldKey = new GlobalKey<ScaffoldState>();
   BuildContext context;
+  AppMethods appMethod = new FirebaseMethods();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +70,7 @@ class _GirliesLoginState extends State<GirliesLogin> {
     );
   }
 
-  verifyLoggin() {
+  verifyLoggin() async {
     if (email.text == "") {
       showSnackBar("Email cannot be empty", scaffoldKey);
       return;
@@ -78,5 +82,14 @@ class _GirliesLoginState extends State<GirliesLogin> {
     }
 
     displayProgressDialog(context);
+    String response = await appMethod.logginUser(
+        email: email.text.toLowerCase(), password: password.text.toLowerCase());
+    if (response == successful) {
+      closeProgressDialog(context);
+      Navigator.of(context).pop(true);
+    } else {
+      closeProgressDialog(context);
+      showSnackBar(response, scaffoldKey);
+    }
   }
 }

@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_girlies_store/tools/progressdialog.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Widget appTextField(
     {IconData textIcon,
@@ -82,4 +84,40 @@ displayProgressDialog(BuildContext context) {
 
 closeProgressDialog(BuildContext context) {
   Navigator.of(context).pop();
+}
+
+writeDataLocally({String key, String value}) async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  localData.setString(key, value);
+}
+
+writeBoolDataLocally({String key, bool value}) async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  localData.setBool(key, value);
+}
+
+getDataLocally({String key}) async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  return localData.get(key);
+}
+
+getStringDataLocally({String key}) async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  return localData.getString(key);
+}
+
+getBoolDataLocally({String key}) async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  return localData.getBool(key) == null ? false : localData.getBool(key);
+}
+
+clearDataLocally() async {
+  Future<SharedPreferences> saveLocal = SharedPreferences.getInstance();
+  final SharedPreferences localData = await saveLocal;
+  localData.clear();
 }
