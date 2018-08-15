@@ -51,6 +51,7 @@ class FirebaseMethods implements AppMethods {
   @override
   Future<String> logginUser({String email, String password}) async {
     // TODO: implement logginUser
+
     FirebaseUser user;
     try {
       user = await auth.signInWithEmailAndPassword(

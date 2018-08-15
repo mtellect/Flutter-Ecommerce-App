@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_girlies_store/adminScreens/admin_home.dart';
 import 'package:flutter_girlies_store/tools/Store.dart';
 import 'package:flutter_girlies_store/tools/app_data.dart';
 import 'package:flutter_girlies_store/tools/app_methods.dart';
@@ -58,7 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
     this.context = context;
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Girlies"),
+        title: GestureDetector(
+          onLongPress: openAdmin,
+          child: new Text("Girlies"),
+        ),
         centerTitle: true,
         actions: <Widget>[
           new IconButton(
@@ -341,5 +345,10 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     bool response = await appMethods.logOutUser();
     if (response == true) getCurrentUser();
+  }
+
+  openAdmin() {
+    Navigator.of(context).push(new MaterialPageRoute(
+        builder: (BuildContext context) => new AdminHome()));
   }
 }
