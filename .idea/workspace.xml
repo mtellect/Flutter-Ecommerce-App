@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7de32003-b31a-4128-8964-9ebf67bd3fea" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/add_products.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/admin_home.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/app_messages.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/app_orders.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/app_products.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/app_users.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/order_history.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/privilages.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/adminScreens/search_data.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/flutter_girlies_store.iml" afterPath="$PROJECT_DIR$/flutter_girlies_store.iml" />
-      <change beforePath="$PROJECT_DIR$/lib/tools/firebase_methods.dart" afterPath="$PROJECT_DIR$/lib/tools/firebase_methods.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/userScreens/myHomePage.dart" afterPath="$PROJECT_DIR$/lib/userScreens/myHomePage.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -376,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534357847859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tutorial 8 (Creating Admin Section)">
+      <created>1534364975996</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1534364975996</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -459,7 +454,8 @@
     <MESSAGE value="tutorial 5 (item details page added)" />
     <MESSAGE value="tutorial 6 (Login Part one)" />
     <MESSAGE value="tutorial 7 (Verifying User Logged IN)" />
-    <option name="LAST_COMMIT_MESSAGE" value="tutorial 7 (Verifying User Logged IN)" />
+    <MESSAGE value="tutorial 8 (Creating Admin Section)" />
+    <option name="LAST_COMMIT_MESSAGE" value="tutorial 8 (Creating Admin Section)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
