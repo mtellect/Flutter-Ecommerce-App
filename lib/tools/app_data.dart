@@ -14,3 +14,24 @@ const String loggedIN = "loggedIN";
 
 //app data
 const String successful = "successful";
+
+List<String> localColors = [
+  "Select a color",
+  "All Colors",
+  "Red",
+  "Orange",
+  "Yellow",
+  "Green",
+  "Blue",
+  "Indigo",
+  "Violet"
+];
+
+List<String> localSizes = [
+  "Select a size",
+  "All Sizes",
+  "Small",
+  "Meduim",
+  "Large",
+  "Extra Large"
+];
