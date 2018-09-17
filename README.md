@@ -1,8 +1,55 @@
-# flutter_girlies_store part one
+# Flutter Ecommerce App from Scratch
 
-Part One of Building FlutterGirlies Shopping/ E-commerce App from scratch
+We would build together from scratch a shopping app with flutter
+## Our Progress so far
 
-## What we did
+#### Introductory Tutorial 
+An introduction to building our ecommerce app 
+[An Introduction](https://youtu.be/T-yn-GBvwRI)
+
+#### Tutorial One 
+Creating Major App Screens 
+[Tutorial One](https://youtu.be/v-OT0xa8uV4)
+
+#### Tutorial Two 
+Creating Our Store 
+[Tutorial Two](https://youtu.be/OSfUSDx6tko)
+
+#### Tutorial Three 
+Adding item details page
+[Tutorial Three](https://youtu.be/s4OLWAPswP4)
+
+#### Tutorial Four 
+Adding firebase to app
+[Tutorial Four](https://youtu.be/kxmVSwmSd_I)
+
+#### Tutorial Five 
+Build app login/ signup part one
+[Tutorial Five](https://youtu.be/apXjyOVwTYo)
+
+#### Tutorial Six 
+Build app login/ signup part two
+[Tutorial Six](https://youtu.be/ESdikgQqxHw)
+
+Basically in this part we built the various user screens for the user section of the application, without full functionalities.
+
+#### Tutorial Seven 
+Verifying User logged IN
+[Tutorial Seven](https://youtu.be/Pvp6Ymp52KA)
+
+#### Tutorial Eight 
+Creating our app admin
+[Tutorial Eight](https://youtu.be/Jg-R3odV3RA)
+
+#### Tutorial Nine 
+Creating our add product screen part one
+[Tutorial Nine](https://youtu.be/lzqZWO9sg5k)
+
+#### Tutorial Ten 
+Creating our add product screen part two
+[Tutorial Ten](https://youtu.be/EWlSdzzETFQ)
+
+
 
 Basically in this part we built the various user screens for the user section of the application, without full functionalities.
 
@@ -11,24 +58,17 @@ Basically in this part we built the various user screens for the user section of
 
 This project isn't complete and it's not yet perfect but still under the development phase, please feel free to study the source code and checkout my new youtube channel were i'd be guiding and explaining the steps i took to build the App from scratch....
 
-Here is a repository containing links of all the example apps demonstrating features/functionality/integrations in [Flutter](https://flutter.io/) application development.
 
-## Pawan's YouTube Channel
-
-[MTechViral](https://www.youtube.com/c/MTechViral)
-
-## Pawan's Facebook Group
+## Facebook Group one
 
 [Let's Flutter](https://www.facebook.com/groups/425920117856409/)
 
+## My Facebook Group 
+
+[Flutter Nigeria](https://web.facebook.com/groups/218903115454474/)
 ## My YouTube Channel
 
-[iamMaugost](https://www.youtube.com/channel/UCk3NXffAF04kM3q5uPXMU-Q/about)
-
-
-## Full Code
-
-[FlutterGirliesStore](https://github.com/mtellect/FlutterGirliesStore)
+[iamMaugost](https://www.youtube.com/iamMaugost)
 
 
 # Pull Requests
