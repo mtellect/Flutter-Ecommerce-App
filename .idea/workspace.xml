@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7de32003-b31a-4128-8964-9ebf67bd3fea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/adminScreens/add_products.dart" afterPath="$PROJECT_DIR$/lib/adminScreens/add_products.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/tools/app_data.dart" afterPath="$PROJECT_DIR$/lib/tools/app_data.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/tools/app_tools.dart" afterPath="$PROJECT_DIR$/lib/tools/app_tools.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -436,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536399187799</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="tutorial 10 updated (Adding Product Screen Part 2)">
+      <created>1537161574239</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1537161574239</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -530,7 +532,8 @@
     <MESSAGE value="tutorial 7 (Verifying User Logged IN)" />
     <MESSAGE value="tutorial 8 (Creating Admin Section)" />
     <MESSAGE value="tutorial 8 re-updated (Creating Admin Section)" />
-    <option name="LAST_COMMIT_MESSAGE" value="tutorial 8 re-updated (Creating Admin Section)" />
+    <MESSAGE value="tutorial 10 updated (Adding Product Screen Part 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="tutorial 10 updated (Adding Product Screen Part 2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
