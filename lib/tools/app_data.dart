@@ -35,3 +35,14 @@ List<String> localSizes = [
   "Large",
   "Extra Large"
 ];
+
+List<String> localCatgeories = [
+  "Select Product category",
+  "Tops",
+  "Shirts",
+  "Shoes",
+  "Bom-shorts",
+  "Jeans",
+  "Bags",
+  "Make-ups"
+];

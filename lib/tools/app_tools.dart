@@ -266,7 +266,7 @@ Widget MultiImagePickerList(
                                   fit: BoxFit.cover,
                                   image: new FileImage(imageList[index]))),
                         ),
-                        Padding(
+                        new Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: new CircleAvatar(
                             backgroundColor: Colors.red[600],
